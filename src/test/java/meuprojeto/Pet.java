@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
 
 public class Pet {
 
@@ -25,15 +26,15 @@ public class Pet {
                 .contentType("application/json")
                 .log().all()  //pedir pra logar , registrar
                 .body(jsonBody)
-        .when()  //Quando
+                .when()  //Quando
                 .post(uri)
-        .then() // Então
+                .then() // Então
                 .log().all()
                 .statusCode(200)
-            .body("name", is("Akita"))
-            .body("status", is("available"))
-
-
+                .body("name", is("Akita"))
+                .body("status", is("available"))
+                .body("category.name", is("dog"))
+                .body("tags.name", contains("sta"))
 
 
         ;
