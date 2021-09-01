@@ -6,7 +6,8 @@ import java.nio.file.Files;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.is;
 
 public class Pet {
 
@@ -24,11 +25,16 @@ public class Pet {
                 .contentType("application/json")
                 .log().all()  //pedir pra logar , registrar
                 .body(jsonBody)
-        .when()
+        .when()  //Quando
                 .post(uri)
-        .then()
+        .then() // Então
                 .log().all()
                 .statusCode(200)
+            .body("name", is("Akita"))
+            .body("status", is("available"))
+
+
+
 
         ;
     }
