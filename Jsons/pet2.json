@@ -1,0 +1,18 @@
+{
+  "id": 278652334,
+  "category": {
+    "id": 1,
+    "name": "dog"
+  },
+  "name": "Akita",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2021,
+      "name": "sta"
+    }
+  ],
+  "status": "sold"
+}

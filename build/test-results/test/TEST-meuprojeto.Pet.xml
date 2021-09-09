@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="meuprojeto.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-01T02:42:59" hostname="DESKTOP-OCI83CL" time="6.837">
+<testsuite name="meuprojeto.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-09T02:27:08" hostname="DESKTOP-OCI83CL" time="7.037">
   <properties/>
-  <testcase name="consultarPet" classname="meuprojeto.Pet" time="6.837"/>
-  <system-out><![CDATA[Request method:	GET
-Request URI:	https://petstore.swagger.io/v2/pet/278652334
+  <testcase name="alterarPet" classname="meuprojeto.Pet" time="7.037"/>
+  <system-out><![CDATA[Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
-				Content-Type=aplication/json; charset=ISO-8859-1
+				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "id": 278652334,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Akita",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2021,
+            "name": "sta"
+        }
+    ],
+    "status": "sold"
+}
 HTTP/1.1 200 OK
-Date: Wed, 01 Sep 2021 02:43:01 GMT
+Date: Thu, 09 Sep 2021 02:27:10 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -40,7 +58,7 @@ Server: Jetty(9.2.9.v20150224)
             "name": "sta"
         }
     ],
-    "status": "available"
+    "status": "sold"
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

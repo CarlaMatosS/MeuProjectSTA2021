@@ -1,17 +1,37 @@
-Request method:	GET
-;Request URI:	https://petstore.swagger.io/v2/pet/278652334
+Request method:	PUT
+1Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
-6				Content-Type=aplication/json; charset=ISO-8859-1
+2				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "id": 278652334,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Akita",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "sta"
+
+        }
+    ],
+    "status": "sold"
+}
 HTTP/1.1 200 OK
-%Date: Wed, 01 Sep 2021 02:43:01 GMT
+%Date: Thu, 09 Sep 2021 02:27:10 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -38,5 +58,5 @@
 
         }
     ],
-    "status": "available"
+    "status": "sold"
 }
